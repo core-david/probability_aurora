@@ -1,3 +1,6 @@
+
+![type:video](videos\probablidad_1.mp4)
+
 **¿Qué es la probablidad?**
 La probabilidad es la lógica de la incertidumbre. Esta disciplina nos proporciona un marco lógico para cuantificar la incertidumbre y la aleatoriedad de una manera rigurosa
 
