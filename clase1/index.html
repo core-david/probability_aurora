@@ -31,11 +31,7 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href=".." class="icon icon-home"> Probabilidad
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -82,7 +78,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p><strong>¿Qué es la probablidad?</strong>
+                <div><p><div class="video-container"><iframe src="../videos/probablidad_1.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<p><strong>¿Qué es la probablidad?</strong>
 La probabilidad es la lógica de la incertidumbre. Esta disciplina nos proporciona un marco lógico para cuantificar la incertidumbre y la aleatoriedad de una manera rigurosa</p>
 <h2 id="espacio-muestral-y-eventos">Espacio Muestral y Eventos</h2>
 <p>El marco matemático de la probabilidad se construye alrededor de conjuntos.</p>
@@ -90,8 +87,8 @@ La probabilidad es la lógica de la incertidumbre. Esta disciplina nos proporcio
 El <span class="arithmatex">\(\text{Espacio Muestral (S)}\)</span> de un experimento es el conjunto de todos los posibles resultados de dicho experimento. Antes de realizar el experimento, se desconoce qué resultado ocurrirá. El espacio muestral puede ser finito, contablemente infinito o incontablemente infinito.</p>
 <p><strong>Evento (A)</strong>
 Un <span class="arithmatex">\(Evento (A)\)</span> es un subconjunto del espacio muestral <span class="arithmatex">\(S\)</span> <span class="arithmatex">\((A⊆S)\)</span>. Decimos que el evento <span class="arithmatex">\(A\)</span> ocurrió si el resultado real del experimento es un elemento de <span class="arithmatex">\(A\)</span>.</p>
-<p><img alt="espacioMuestral" src="../images/space.png" /></p>
-<hr />
+<p><img alt="espacioMuestral" src="../images/space.png"></p>
+<hr>
 <h3 id="tipos-de-eventos-operaciones-de-conjuntos">Tipos de Eventos (Operaciones de Conjuntos)</h3>
 <p>Los conceptos de la Teoría de Conjuntos, como uniones, intersecciones y complementos, son esenciales ya que nos permiten construir nuevos eventos a partir de eventos previamente definidos.</p>
 <table>
@@ -141,7 +138,7 @@ Un <span class="arithmatex">\(Evento (A)\)</span> es un subconjunto del espacio 
 <div class="arithmatex">\[
 P_{\text{naïve}}(A) = \frac{|A|}{|S|} = \frac{\text{número de resultados favorables a } A}{\text{número total de resultados en } S}
 \]</div>
-<hr />
+<hr>
 <h3 id="restricciones-de-la-definicion-no-formal">Restricciones de la Definicion no Formal</h3>
 <ol>
 <li>
@@ -153,10 +150,10 @@ P_{\text{naïve}}(A) = \frac{|A|}{|S|} = \frac{\text{número de resultados favor
 </ol>
 <p>El enfoque naive es aplicable cuando existe simetría en el problema que hace que los resultados sean igualmente probables (por ejemplo, lanzar un dado justo o un mazo de cartas bien barajado). </p>
 <p><strong>Advertencia:</strong> Es un error común asumir resultados igualmente probables sin justificación (por ejemplo, argumentar "sucederá o no sucederá, por lo tanto, 50-50").</p>
-<hr />
+<hr>
 <h2 id="conteo-multiplicacion-permutaciones-y-combinaciones">Conteo: Multiplicación, Permutaciones y Combinaciones</h2>
 <p>Para calcular la probabilidad naive, a menudo es necesario contar el tamaño de los conjuntos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(S\)</span>, lo que requiere métodos de conteo.</p>
-<hr />
+<hr>
 <h3 id="regla-de-la-multiplicacion">Regla de la Multiplicación</h3>
 <p>La Regla de la Multiplicación establece que si un experimento compuesto consta de dos sub-experimentos, Experimento <span class="arithmatex">\(A\)</span> con <span class="arithmatex">\(a\)</span> resultados posibles y Experimento <span class="arithmatex">\(B\)</span> con <span class="arithmatex">\(b\)</span> resultados posibles por cada resultado de <span class="arithmatex">\(A\)</span>, entonces el experimento compuesto tiene <span class="arithmatex">\(a×b\)</span> resultados posibles. Este principio se extiende a múltiples sub-experimentos y es la base para las reglas de muestreo.</p>
 <h3 id="permutaciones-muestreo-ordenado">Permutaciones (Muestreo Ordenado)</h3>
@@ -183,7 +180,7 @@ P_{\text{naïve}}(A) = \frac{|A|}{|S|} = \frac{\text{número de resultados favor
 </tbody>
 </table>
 <p><em>Nota: Una Permutación de <span class="arithmatex">\(n\)</span> objetos es un arreglo de estos en algún orden, y hay <span class="arithmatex">\(n!\)</span> de estas (caso <span class="arithmatex">\(k=n\)</span> sin reemplazo).</em></p>
-<hr />
+<hr>
 <h3 id="combinaciones-muestreo-no-ordenado">Combinaciones (Muestreo No Ordenado)</h3>
 <p>Una Combinación o Coeficiente Binomial cuenta el número de subconjuntos de un cierto tamaño.</p>
 <p>El coeficiente binomial <span class="arithmatex">\(\binom{n}{k}\)</span>, leído como "n en k", es el número de maneras de elegir k objetos de un conjunto de tamaño <span class="arithmatex">\(n\)</span> donde el orden no importa.</p>
@@ -204,16 +201,16 @@ P_{\text{naïve}}(A) = \frac{|A|}{|S|} = \frac{\text{número de resultados favor
 <p>Para cualquier evento <span class="arithmatex">\(A\)</span>:</p>
 <div class="arithmatex">\[P(A^c) = 1 - P(A).\]</div>
 <p><strong>Justificación:</strong> El evento <span class="arithmatex">\(A\)</span> y su complemento <span class="arithmatex">\(A^c\)</span> son disjuntos, y su unión es el espacio muestral completo <span class="arithmatex">\(S\)</span>. Aplicando el Axioma 2, <span class="arithmatex">\(P(S) = P(A \cup A^c) = P(A) + P(A^c)\)</span>. Dado que <span class="arithmatex">\(P(S) = 1\)</span> (Axioma 1), se deduce la regla.</p>
-<hr />
+<hr>
 <h3 id="2-monotonicidad-ley-de-inclusion">2. Monotonicidad (Ley de Inclusión)</h3>
 <p>Si un evento <span class="arithmatex">\(A\)</span> está contenido en un evento <span class="arithmatex">\(B\)</span> (<span class="arithmatex">\(A \subset B\)</span>), entonces:</p>
 <div class="arithmatex">\[P(A) \le P(B).\]</div>
 <p><strong>Justificación:</strong> Si <span class="arithmatex">\(A \subset B\)</span>, podemos descomponer <span class="arithmatex">\(B\)</span> en dos eventos disjuntos: <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B \cap A^c\)</span> (la parte de <span class="arithmatex">\(B\)</span> que no está en <span class="arithmatex">\(A\)</span>). Por el Axioma 2, <span class="arithmatex">\(P(B) = P(A) + P(B \cap A^c)\)</span>. Dado que la probabilidad de cualquier evento es no negativa, <span class="arithmatex">\(P(B \cap A^c) \ge 0\)</span>, lo que prueba que <span class="arithmatex">\(P(B) \ge P(A)\)</span>.</p>
-<hr />
+<hr>
 <h3 id="3-ley-general-de-adicion-inclusion-exclusion-para-dos-eventos">3. Ley General de Adición (Inclusión-Exclusión para dos Eventos)</h3>
 <p>Para cualesquiera dos eventos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span>, no necesariamente disjuntos:</p>
 <div class="arithmatex">\[P(A \cup B) = P(A) + P(B) - P(A \cap B).\]</div>
-<p><strong>Justificación:</strong> Al sumar <span class="arithmatex">\(P(A) + P(B)\)</span>, la intersección <span class="arithmatex">\(A \cap B\)</span> se cuenta dos veces. Se resta <span class="arithmatex">\(P(A \cap B)\)</span> una vez para corregir esta doble cuenta. Este resultado se demuestra escribiendo la unión <span class="arithmatex">\(A \cup B\)</span> como la unión de eventos disjuntos, por ejemplo, <span class="arithmatex">\(A \cup (B \cap A^c)\)</span>.</p>
+<p><strong>Justificación:</strong> Al sumar <span class="arithmatex">\(P(A) + P(B)\)</span>, la intersección <span class="arithmatex">\(A \cap B\)</span> se cuenta dos veces. Se resta <span class="arithmatex">\(P(A \cap B)\)</span> una vez para corregir esta doble cuenta. Este resultado se demuestra escribiendo la unión <span class="arithmatex">\(A \cup B\)</span> como la unión de eventos disjuntos, por ejemplo, <span class="arithmatex">\(A \cup (B \cap A^c)\)</span>.</p></div>
               
             </div>
           </div><footer>
@@ -255,7 +252,6 @@ P_{\text{naïve}}(A) = \frac{|A|}{|S|} = \frac{\text{número de resultados favor
     <script src="../js/theme.js"></script>
       <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <script src="../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
