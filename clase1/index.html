@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Clase 1 - Probabilidad</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Clase 1";
+        var mkdocs_page_input_path = "clase1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Probabilidad
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Clase 1</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-eventos-operaciones-de-conjuntos">Tipos de Eventos (Operaciones de Conjuntos)</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../clase2/">Clase 2</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../clase3/">Clase 3</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Probabilidad</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Clase 1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><strong>¿Qué es la probablidad?</strong>
+La probabilidad es la lógica de la incertidumbre. Esta disciplina nos proporciona un marco lógico para cuantificar la incertidumbre y la aleatoriedad de una manera rigurosa</p>
+<h2 id="espacio-muestral-y-eventos">Espacio Muestral y Eventos</h2>
+<p>El marco matemático de la probabilidad se construye alrededor de conjuntos.</p>
+<p><strong>Espacio Muestral (S)</strong>
+El <span class="arithmatex">\(\text{Espacio Muestral (S)}\)</span> de un experimento es el conjunto de todos los posibles resultados de dicho experimento. Antes de realizar el experimento, se desconoce qué resultado ocurrirá. El espacio muestral puede ser finito, contablemente infinito o incontablemente infinito.</p>
+<p><strong>Evento (A)</strong>
+Un <span class="arithmatex">\(Evento (A)\)</span> es un subconjunto del espacio muestral <span class="arithmatex">\(S\)</span> <span class="arithmatex">\((A⊆S)\)</span>. Decimos que el evento <span class="arithmatex">\(A\)</span> ocurrió si el resultado real del experimento es un elemento de <span class="arithmatex">\(A\)</span>.</p>
+<p><img alt="espacioMuestral" src="../images/space.png" /></p>
+<hr />
+<h3 id="tipos-de-eventos-operaciones-de-conjuntos">Tipos de Eventos (Operaciones de Conjuntos)</h3>
+<p>Los conceptos de la Teoría de Conjuntos, como uniones, intersecciones y complementos, son esenciales ya que nos permiten construir nuevos eventos a partir de eventos previamente definidos.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Evento</th>
+<th style="text-align: left;">Notación de Conjuntos</th>
+<th style="text-align: left;">Descripción en Palabras</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Espacio Muestral</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(S\)</span></td>
+<td style="text-align: left;">Algo debe suceder. Ocurre con certeza.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Evento Imposible</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\emptyset\)</span></td>
+<td style="text-align: left;">No puede ocurrir. Tiene probabilidad <span class="arithmatex">\(0\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>A o B</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(A \cup B\)</span></td>
+<td style="text-align: left;">Ocurre al menos uno de <span class="arithmatex">\(A\)</span> o <span class="arithmatex">\(B\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>A y B</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(A \cap B\)</span></td>
+<td style="text-align: left;">Ocurren tanto <span class="arithmatex">\(A\)</span> como <span class="arithmatex">\(B\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>No A</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(A^c\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(A\)</span> no ocurre.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Eventos mutuamente excluyentes</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(A \cap B = \emptyset\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span> no pueden ocurrir simultáneamente (son disjuntos).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="definicion-no-formal-de-la-probablidad">Definición no Formal de la Probablidad</h2>
+<p>Históricamente, la primera definición de probabilidad se basaba en el conteo de resultados</p>
+<p>Para un evento <span class="arithmatex">\(A\)</span> en un experimento con un espacio muestral finito <span class="arithmatex">\(S\)</span>, la probabilidad ingenua de <span class="arithmatex">\(A\)</span> es:</p>
+<div class="arithmatex">\[
+P_{\text{naïve}}(A) = \frac{|A|}{|S|} = \frac{\text{número de resultados favorables a } A}{\text{número total de resultados en } S}
+\]</div>
+<hr />
+<h3 id="restricciones-de-la-definicion-no-formal">Restricciones de la Definicion no Formal</h3>
+<ol>
+<li>
+<p>El espacio muestral <span class="arithmatex">\(S\)</span> debe ser finito.</p>
+</li>
+<li>
+<p>Todos los resultados deben ser igualmente probables. </p>
+</li>
+</ol>
+<p>El enfoque naive es aplicable cuando existe simetría en el problema que hace que los resultados sean igualmente probables (por ejemplo, lanzar un dado justo o un mazo de cartas bien barajado). </p>
+<p><strong>Advertencia:</strong> Es un error común asumir resultados igualmente probables sin justificación (por ejemplo, argumentar "sucederá o no sucederá, por lo tanto, 50-50").</p>
+<hr />
+<h2 id="conteo-multiplicacion-permutaciones-y-combinaciones">Conteo: Multiplicación, Permutaciones y Combinaciones</h2>
+<p>Para calcular la probabilidad naive, a menudo es necesario contar el tamaño de los conjuntos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(S\)</span>, lo que requiere métodos de conteo.</p>
+<hr />
+<h3 id="regla-de-la-multiplicacion">Regla de la Multiplicación</h3>
+<p>La Regla de la Multiplicación establece que si un experimento compuesto consta de dos sub-experimentos, Experimento <span class="arithmatex">\(A\)</span> con <span class="arithmatex">\(a\)</span> resultados posibles y Experimento <span class="arithmatex">\(B\)</span> con <span class="arithmatex">\(b\)</span> resultados posibles por cada resultado de <span class="arithmatex">\(A\)</span>, entonces el experimento compuesto tiene <span class="arithmatex">\(a×b\)</span> resultados posibles. Este principio se extiende a múltiples sub-experimentos y es la base para las reglas de muestreo.</p>
+<h3 id="permutaciones-muestreo-ordenado">Permutaciones (Muestreo Ordenado)</h3>
+<p>Cuando se selecciona una muestra, es crucial saber si el orden de la selección es relevante y si la selección se hace con o sin reemplazo,</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo de Muestreo</th>
+<th style="text-align: left;">Condición</th>
+<th style="text-align: left;">Número de Resultados (Orden Importa)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Con Reemplazo</strong></td>
+<td style="text-align: left;">Se elige <span class="arithmatex">\(k\)</span> veces de <span class="arithmatex">\(n\)</span> objetos, volviendo a poner el objeto cada vez.</td>
+<td style="text-align: left;"><span class="arithmatex">\(n^k\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sin Reemplazo (Permutación)</strong></td>
+<td style="text-align: left;">Se elige <span class="arithmatex">\(k\)</span> veces de <span class="arithmatex">\(n\)</span> objetos, sin poder elegir el mismo objeto dos veces (requiere <span class="arithmatex">\(k \le n\)</span>).</td>
+<td style="text-align: left;"><span class="arithmatex">\(n(n-1)\cdots(n-k+1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><em>Nota: Una Permutación de <span class="arithmatex">\(n\)</span> objetos es un arreglo de estos en algún orden, y hay <span class="arithmatex">\(n!\)</span> de estas (caso <span class="arithmatex">\(k=n\)</span> sin reemplazo).</em></p>
+<hr />
+<h3 id="combinaciones-muestreo-no-ordenado">Combinaciones (Muestreo No Ordenado)</h3>
+<p>Una Combinación o Coeficiente Binomial cuenta el número de subconjuntos de un cierto tamaño.</p>
+<p>El coeficiente binomial <span class="arithmatex">\(\binom{n}{k}\)</span>, leído como "n en k", es el número de maneras de elegir k objetos de un conjunto de tamaño <span class="arithmatex">\(n\)</span> donde el orden no importa.</p>
+<p><span class="arithmatex">\(\binom{n}{k} = \frac{n(n-1)\cdots(n-k+1)}{k!} = \frac{n!}{k!(n-k)!} \quad \text{para } k \le n\)</span></p>
+<h2 id="axiomas-de-kolmogorov-y-definicion-general-de-probabilidad">Axiomas de Kolmogorov y Definición General de Probabilidad</h2>
+<p>Para ir más allá de las limitaciones de la definición naive (espacios infinitos o resultados no equiprobables), definimos una función de probabilidad <span class="arithmatex">\((P)\)</span> que debe satisfacer solo dos reglas (axiomas).</p>
+<p>Un <strong>Espacio de Probabilidad</strong> consiste en un espacio muestral <span class="arithmatex">\(S\)</span> y una función de probabilidad <span class="arithmatex">\(P\)</span> que toma un evento <span class="arithmatex">\(A⊆S\)</span> como entrada y devuelve un número real <span class="arithmatex">\(P(A)\)</span> entre 0 y 1 como salida.</p>
+<h3 id="axiomas-de-kolmogorov">Axiomas de Kolmogorov</h3>
+<p>La función <span class="arithmatex">\(P\)</span> debe satisfacer los siguientes axiomas:</p>
+<p><span class="arithmatex">\(1\)</span>. Rango y Normalización: </p>
+<p><span class="arithmatex">\(P(\emptyset) = 0, \quad P(S) = 1.\)</span></p>
+<p>Esto significa que un evento imposible tiene probabilidad 0, y el evento cierto (el espacio muestral completo) tiene probabilidad 1. </p>
+<p><span class="arithmatex">\(2\)</span>. Aditividad (Sumatoria) Contable: Si <span class="arithmatex">\(A_1, A_2, ...\)</span> son eventos disjuntos (mutuamente excluyentes), entonces la probabilidad de su unión es la suma de sus probabilidades: </p>
+<p><span class="arithmatex">\(P\left(\bigcup_{j=1}^{\infty} A_j\right) = \sum_{j=1}^{\infty} P(A_j).\)</span></p>
+<h2 id="leyes-y-propiedades-basicas-de-la-probabilidad">Leyes y Propiedades Básicas de la Probabilidad</h2>
+<p>A partir de los dos axiomas, se pueden derivar muchas propiedades útiles que son válidas para cualquier función de probabilidad.</p>
+<h3 id="1-regla-del-complemento">1. Regla del Complemento</h3>
+<p>Para cualquier evento <span class="arithmatex">\(A\)</span>:</p>
+<div class="arithmatex">\[P(A^c) = 1 - P(A).\]</div>
+<p><strong>Justificación:</strong> El evento <span class="arithmatex">\(A\)</span> y su complemento <span class="arithmatex">\(A^c\)</span> son disjuntos, y su unión es el espacio muestral completo <span class="arithmatex">\(S\)</span>. Aplicando el Axioma 2, <span class="arithmatex">\(P(S) = P(A \cup A^c) = P(A) + P(A^c)\)</span>. Dado que <span class="arithmatex">\(P(S) = 1\)</span> (Axioma 1), se deduce la regla.</p>
+<hr />
+<h3 id="2-monotonicidad-ley-de-inclusion">2. Monotonicidad (Ley de Inclusión)</h3>
+<p>Si un evento <span class="arithmatex">\(A\)</span> está contenido en un evento <span class="arithmatex">\(B\)</span> (<span class="arithmatex">\(A \subset B\)</span>), entonces:</p>
+<div class="arithmatex">\[P(A) \le P(B).\]</div>
+<p><strong>Justificación:</strong> Si <span class="arithmatex">\(A \subset B\)</span>, podemos descomponer <span class="arithmatex">\(B\)</span> en dos eventos disjuntos: <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B \cap A^c\)</span> (la parte de <span class="arithmatex">\(B\)</span> que no está en <span class="arithmatex">\(A\)</span>). Por el Axioma 2, <span class="arithmatex">\(P(B) = P(A) + P(B \cap A^c)\)</span>. Dado que la probabilidad de cualquier evento es no negativa, <span class="arithmatex">\(P(B \cap A^c) \ge 0\)</span>, lo que prueba que <span class="arithmatex">\(P(B) \ge P(A)\)</span>.</p>
+<hr />
+<h3 id="3-ley-general-de-adicion-inclusion-exclusion-para-dos-eventos">3. Ley General de Adición (Inclusión-Exclusión para dos Eventos)</h3>
+<p>Para cualesquiera dos eventos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span>, no necesariamente disjuntos:</p>
+<div class="arithmatex">\[P(A \cup B) = P(A) + P(B) - P(A \cap B).\]</div>
+<p><strong>Justificación:</strong> Al sumar <span class="arithmatex">\(P(A) + P(B)\)</span>, la intersección <span class="arithmatex">\(A \cap B\)</span> se cuenta dos veces. Se resta <span class="arithmatex">\(P(A \cap B)\)</span> una vez para corregir esta doble cuenta. Este resultado se demuestra escribiendo la unión <span class="arithmatex">\(A \cup B\)</span> como la unión de eventos disjuntos, por ejemplo, <span class="arithmatex">\(A \cup (B \cap A^c)\)</span>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../clase2/" class="btn btn-neutral float-right" title="Clase 2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../clase2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
