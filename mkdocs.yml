@@ -1,0 +1,18 @@
+site_name: Probabilidad
+
+nav:
+  - Home: index.md
+  - Clase 1: clase1.md
+  - Clase 2: clase2.md
+  - Clase 3: clase3.md
+
+theme: readthedocs
+
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true # Recommended for MathJax 3 compatibility
+      
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

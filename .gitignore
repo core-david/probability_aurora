@@ -1,0 +1,9 @@
+# Python Virtual Environment
+.venv/
+
+# MkDocs Generated Output
+site/
+
+# Cache files
+__pycache__/
+*.pyc
