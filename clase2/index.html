@@ -46,6 +46,12 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Clase 2</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#variable-aleatoria-rv">Variable Aleatoria (RV)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#distribuciones-discretas-y-funcion-de-masa-de-probabilidad-fmp">Distribuciones Discretas y Función de Masa de Probabilidad (FMP)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#la-funcion-de-distribucion-acumulada-fda">La Función de Distribución Acumulada (FDA)</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -76,7 +82,202 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="hola">Hola</h1>
+                <div><h2 id="bloque-1-va-fmp-y-fda">Bloque 1: VA, FMP y FDA</h2>
+<p><div class="video-container"><iframe src="../videos/Variables_Aleatorias.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<h3 id="variable-aleatoria-rv">Variable Aleatoria (RV)</h3>
+<blockquote>
+<p><strong>Definición:</strong>
+Una <strong>Variable Aleatoria (VA)</strong>, denotada comúnmente como <span class="arithmatex">\(X\)</span>, es fundamentalmente una <strong>función</strong>.</p>
+</blockquote>
+<p>La función de la variable aleatoria es mapear los resultados de un experimento aleatorio (el espacio muestral, <span class="arithmatex">\(S\)</span>) a valores numéricos reales (<span class="arithmatex">\(\mathbb{R}\)</span>).</p>
+<p><strong>Explicación Intuitiva:</strong>
+Piense en la VA como un resumen numérico del experimento. Realizamos un experimento (lanzar un dado, una secuencia de ensayos, etc.), y el resultado de ese experimento, aunque aleatorio, se traduce en un número. La aleatoriedad de la variable <span class="arithmatex">\(X\)</span> proviene enteramente de la aleatoriedad del experimento subyacente.</p>
+<p>Por ejemplo, si lanzamos una moneda, el resultado no es un número ("Cara" o "Cruz"). Una VA simple podría asignar <span class="arithmatex">\(1\)</span> a "Cara" y <span class="arithmatex">\(0\)</span> a "Cruz".</p>
+<p><strong>Ejemplo: Variable Indicadora / Bernoulli</strong></p>
+<p>El tipo de variable aleatoria más simple, aparte de una constante, es aquella que solo toma dos valores posibles, <span class="arithmatex">\(0\)</span> o <span class="arithmatex">\(1\)</span>. Esto se conoce como la distribución de Bernoulli, <span class="arithmatex">\(Bern(p)\)</span>.</p>
+<p>Una <strong>variable indicadora</strong> <span class="arithmatex">\(I_A\)</span> es un tipo de RV Bernoulli. Se define como:</p>
+<p><span class="arithmatex">\(I_A = \begin{cases} 1 &amp; \text{si el evento } A \text{ ocurre} \\ 0 &amp; \text{si el evento } A \text{ no ocurre} \end{cases}\)</span></p>
+<h3 id="distribuciones-discretas-y-funcion-de-masa-de-probabilidad-fmp">Distribuciones Discretas y Función de Masa de Probabilidad (FMP)</h3>
+<blockquote>
+<p><strong>Definición:</strong>
+Una variable aleatoria es <strong>discreta</strong> si el conjunto de sus posibles valores es contable; es decir, si los valores pueden listarse (ya sea una lista finita o una lista infinita). Un ejemplo común es cuando la VA toma valores enteros no negativos, como <span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(3\)</span>, etc.</p>
+</blockquote>
+<p>Para describir la distribución de una VA discreta, utilizamos la <strong>Función de Masa de Probabilidad (PMF)</strong>.</p>
+<p>La PMF de una VA discreta <span class="arithmatex">\(X\)</span> especifica la probabilidad de que <span class="arithmatex">\(X\)</span> tome exactamente un valor <span class="arithmatex">\(x\)</span>. Se denota como <span class="arithmatex">\(P(X = x)\)</span>.</p>
+<p><strong>Propiedades de la FMP:</strong></p>
+<p><span class="arithmatex">\(1\)</span>. La probabilidad de que <span class="arithmatex">\(X\)</span> tome cualquier valor particular debe ser no negativa (<span class="arithmatex">\(P(X = x) \ge 0\)</span>).</p>
+<p><span class="arithmatex">\(2\)</span>. La suma de todas las probabilidades para todos los valores posibles de <span class="arithmatex">\(X\)</span> debe ser igual a <span class="arithmatex">\(1\)</span>.</p>
+<p><strong>Ejemplo: FMP Binomial</strong></p>
+<p>La distribución <strong>Binomial</strong> <span class="arithmatex">\(Bin(n, p)\)</span> es un ejemplo fundamental de una distribución discreta. Su historia es la de contar el número de éxitos en <span class="arithmatex">\(n\)</span> ensayos independientes de Bernoulli, donde <span class="arithmatex">\(p\)</span> es la probabilidad de éxito en cada ensayo.</p>
+<p>La FMP para una RV <span class="arithmatex">\(X \sim Bin(n, p)\)</span> es:
+$$
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}
+$$
+donde <span class="arithmatex">\(k\)</span> es el número de éxitos, <span class="arithmatex">\(0 \le k \le n\)</span>. Esta fórmula actúa como el "plano" de la VA, asignando una masa de probabilidad a cada número posible de éxitos.</p>
+<h3 id="la-funcion-de-distribucion-acumulada-fda">La Función de Distribución Acumulada (FDA)</h3>
+<blockquote>
+<p><strong>Definición:</strong> La <strong>Función de Distribución Acumulada (FDA)</strong>, denotada por <span class="arithmatex">\(F(x)\)</span>, describe la probabilidad de que una variable aleatoria <span class="arithmatex">\(X\)</span> tome un valor menor o igual a un número real específico <span class="arithmatex">\(x\)</span>.</p>
+</blockquote>
+<p><strong>Su definición formal es:</strong>
+$$
+F(x) = P(X \le x)
+$$
+La FDA es una función definida para todos los números reales <span class="arithmatex">\(x\)</span>. Es importante porque, a diferencia de la FMP (que solo funciona para RVs discretas), la FDA puede describir la distribución de <strong>cualquier</strong> variable aleatoria (discreta, continua o mixta). Además, al conocer la FDA, se pueden calcular todas las demás probabilidades relacionadas con <span class="arithmatex">\(X\)</span>.</p>
+<p><strong>Discusión de las Propiedades de la FDA:</strong></p>
+<p>La gráfica de cualquier FDA debe satisfacer tres propiedades clave, visibles en el ejemplo de una VA discreta:</p>
+<p><strong>1. Monotonía (Creciente):</strong> La FDA es una función no decreciente. A medida que el valor de <span class="arithmatex">\(x\)</span> (eje horizontal) aumenta, la probabilidad acumulada <span class="arithmatex">\(F(x)\)</span> debe aumentar o permanecer constante, pero nunca puede disminuir.</p>
+<p><strong>2. Límite Inferior (a 0):</strong> Cuando <span class="arithmatex">\(x\)</span> tiende a menos infinito (<span class="arithmatex">\(x \to -\infty\)</span>), el valor de la FDA se aproxima a cero (<span class="arithmatex">\(F(x) \to 0\)</span>). Intuitivamente, la probabilidad de que la VA tome un valor extremadamente pequeño es cero.</p>
+<p><strong>3. Límite Superior (a 1):</strong> Cuando <span class="arithmatex">\(x\)</span> tiende a infinito (<span class="arithmatex">\(x \to \infty\)</span>), el valor de la FDA se aproxima a uno (<span class="arithmatex">\(F(x) \to 1\)</span>). Esto significa que es seguro (probabilidad <span class="arithmatex">\(1\)</span>) que la VA tomará algún valor real.</p>
+<h2 id="introduccion-al-concepto-de-parametro">Introducción al Concepto de Parámetro</h2>
+<p><strong>Definición:</strong> Los <strong>parámetros</strong> son números que definen una distribución específica dentro de una familia de distribuciones. Si se cambian los valores de los parámetros, se obtiene una distribución diferente, aunque siga perteneciendo a la misma "familia" (por ejemplo, sigue siendo Binomial o Poisson).</p>
+<p><strong>Ejemplos de Parámetros:</strong></p>
+<ul>
+<li><strong>Binomial:</strong> La distribución <span class="arithmatex">\(Bin(n, p)\)</span> tiene dos parámetros:<ul>
+<li><span class="arithmatex">\(n\)</span>: el número fijo de ensayos.</li>
+<li><span class="arithmatex">\(p\)</span>: la probabilidad de éxito individual.</li>
+</ul>
+</li>
+<li><strong>Poisson:</strong> La distribución <span class="arithmatex">\(Pois(\lambda)\)</span> tiene un solo parámetro, <span class="arithmatex">\(\lambda\)</span> (<span class="arithmatex">\(\lambda &gt; 0\)</span>). Este parámetro se interpreta como la tasa media de ocurrencia de los eventos que se están contando.</li>
+</ul>
+<h2 id="bloque-2-valor-esperado-y-linealidad">Bloque 2: Valor Esperado y Linealidad</h2>
+<p><div class="video-container"><iframe src="../videos/linealidad.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<h3 id="valor-esperado-media">Valor Esperado (Media)</h3>
+<blockquote>
+<p><strong>Definición:</strong> El <strong>valor esperado</strong> de una variable aleatoria (VA) <span class="arithmatex">\(X\)</span>, también conocido como la esperanza o la media <span class="arithmatex">\(E(X)\)</span>, es un número que se utiliza para resumir el "valor promedio" de la variable. Aunque la distribución de una variable aleatoria proporciona información completa sobre las probabilidades de que la VA caiga en cualquier conjunto particular, gestionar tantas probabilidades puede ser complicado, por lo que a menudo se busca un único número que resuma el valor medio.</p>
+</blockquote>
+<p>La definición de la esperanza para una variable aleatoria discreta se inspira en el concepto de la media ponderada de una lista de números.</p>
+<p><strong>Definición de <span class="arithmatex">\(E(X)\)</span></strong></p>
+<p>Para una variable aleatoria discreta <span class="arithmatex">\(X\)</span> con posibles valores <span class="arithmatex">\(x_1, x_2, ...\)</span>, el valor esperado se define como un promedio ponderado de sus posibles valores:</p>
+<div class="arithmatex">\[E(X) = \sum_{x} x P(X = x)\]</div>
+<p>En palabras, el valor esperado de <span class="arithmatex">\(X\)</span> es un <strong>promedio ponderado</strong> de los posibles valores que <span class="arithmatex">\(X\)</span> puede tomar, ponderado por las probabilidades de cada valor.</p>
+<p><strong>Explicación Intuitiva y Ejemplo</strong></p>
+<p>Considera el lanzamiento de un dado justo de <span class="arithmatex">\(6\)</span> caras. La variable aleatoria <span class="arithmatex">\(X\)</span> toma los valores <span class="arithmatex">\(1, 2, 3, 4, 5, 6\)</span>, cada uno con una probabilidad igual de <span class="arithmatex">\(1/6\)</span>.</p>
+<p><strong>1. Cálculo:</strong> Aplicando la definición del valor esperado:</p>
+<div class="arithmatex">\[E(X) = (1)\frac{1}{6} + (2)\frac{1}{6} + (3)\frac{1}{6} + (4)\frac{1}{6} + (5)\frac{1}{6} + (6)\frac{1}{6}\]</div>
+<p><strong>2. Resultado:</strong></p>
+<div class="arithmatex">\[E(X) = \frac{1}{6}(1 + 2 + 3 + 4 + 5 + 6) = 3.5\]</div>
+<p>Intuitivamente, este resultado (<span class="arithmatex">\(3.5\)</span>) es el promedio que esperaríamos obtener. Es importante notar que el valor esperado de <span class="arithmatex">\(X\)</span> no necesariamente es un valor que <span class="arithmatex">\(X\)</span> puede alcanzar. Por ejemplo, un dado nunca caerá en <span class="arithmatex">\(3.5\)</span>.</p>
+<h3 id="linealidad-de-la-expectativa">Linealidad de la Expectativa</h3>
+<p>La propiedad más importante de la esperanza es la <strong>linealidad</strong>. La linealidad permite simplificar enormemente el cálculo de valores esperados, a menudo permitiendo evitar la definición directa.</p>
+<p><strong>Propiedades de la Linealidad</strong></p>
+<p>Para cualesquiera variables aleatorias <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span> y cualquier constante <span class="arithmatex">\(c\)</span>, la linealidad establece dos reglas fundamentales:</p>
+<p><strong>1. Suma de Expectativas:</strong> El valor esperado de una suma de variables aleatorias es la suma de los valores esperados individuales:</p>
+<div class="arithmatex">\[E(X + Y) = E(X) + E(Y)\]</div>
+<p><strong>2. Constantes:</strong> Los factores constantes pueden ser sacados de la esperanza:</p>
+<div class="arithmatex">\[E(cX) = cE(X)\]</div>
+<p><strong>Énfasis en la Dependencia</strong></p>
+<p>Lo que resulta sorprendente de la Linealidad de la Expectativa es que la propiedad <span class="arithmatex">\(E(X + Y) = E(X) + E(Y)\)</span> se mantiene <strong>incluso si <span class="arithmatex">\(X\)</span> y <span class="arithmatex">\(Y\)</span> son dependientes</strong>.</p>
+<p><strong>Intuición del caso extremo (Dependencia):</strong></p>
+<p>Para construir una intuición, considera el caso extremo de dependencia: cuando <span class="arithmatex">\(X\)</span> siempre es igual a <span class="arithmatex">\(Y\)</span>.</p>
+<ul>
+<li>
+<p>En este caso, la variable <span class="arithmatex">\(X + Y\)</span> es en realidad <span class="arithmatex">\(2X\)</span>.</p>
+</li>
+<li>
+<p>Aplicando la regla del factor constante: <span class="arithmatex">\(E(X + Y) = E(2X) = 2E(X)\)</span>.</p>
+</li>
+<li>
+<p>La suma de las expectativas es: <span class="arithmatex">\(E(X) + E(Y) = E(X) + E(X) = 2E(X)\)</span>.</p>
+</li>
+</ul>
+<p>Dado que <span class="arithmatex">\(2E(X) = 2E(X)\)</span>, la linealidad se mantiene incluso en esta situación de dependencia máxima.</p>
+<p><strong>Intuición mediante Simulación y Promedios Aritméticos:</strong></p>
+<p>Una forma de entender por qué la linealidad se cumple sin importar la dependencia es viéndola como un simple hecho sobre la aritmética.</p>
+<p>Imaginemos que realizamos un experimento un número muy grande (<span class="arithmatex">\(n\)</span>) de veces, registrando los valores de <span class="arithmatex">\(X\)</span>, los valores de <span class="arithmatex">\(Y\)</span>, y los valores de la suma <span class="arithmatex">\(X + Y\)</span> en tres columnas.</p>
+<div class="arithmatex">\[
+\begin{array}{|c|c|c|c|}
+\hline
+\textbf{Repetición} &amp; \textbf{X} &amp; \textbf{Y} &amp; \textbf{X + Y} \\
+\hline
+1 &amp; x_1 &amp; y_1 &amp; x_1 + y_1 \\
+\hline
+2 &amp; x_2 &amp; y_2 &amp; x_2 + y_2 \\
+\hline
+... &amp; ... &amp; ... &amp; ... \\
+\hline
+n &amp; x_n &amp; y_n &amp; x_n + y_n \\
+\hline
+\end{array}
+\]</div>
+<p>Hay dos maneras de calcular la suma total de los números en la última columna (<span class="arithmatex">\(X + Y\)</span>):</p>
+<ol>
+<li>
+<p>Sumar directamente todos los números en la columna <span class="arithmatex">\(X + Y\)</span>.</p>
+</li>
+<li>
+<p>Sumar todos los números en la columna <span class="arithmatex">\(X\)</span>, sumar todos los números en la columna <span class="arithmatex">\(Y\)</span>, y luego sumar estos dos resultados.</p>
+</li>
+</ol>
+<p>Estos dos procedimientos deben dar el mismo resultado. Si dividimos ambas sumas por <span class="arithmatex">\(n\)</span> (el número de repeticiones), obtenemos el promedio aritmético de cada columna.</p>
+<ul>
+<li>
+<p>El promedio de la columna <span class="arithmatex">\(X + Y\)</span> se acerca a <span class="arithmatex">\(E(X + Y)\)</span>.</p>
+</li>
+<li>
+<p>La suma de los promedios de las columnas <span class="arithmatex">\(X\)</span> y <span class="arithmatex">\(Y\)</span> se acerca a <span class="arithmatex">\(E(X) + E(Y)\)</span>.</p>
+</li>
+</ul>
+<p>Dado que el promedio de la última columna es igual a la suma de los promedios de las dos primeras columnas, se demuestra que <span class="arithmatex">\(E(X + Y) = E(X) + E(Y)\)</span>, y esto no depende de si los valores de <span class="arithmatex">\(X\)</span> y <span class="arithmatex">\(Y\)</span> en cada fila (repetición) están relacionados o no.</p>
+<h2 id="bloque-3-varianza-desviacion-estandar-y-lotus">Bloque 3: Varianza, Desviación Estándar y LOTUS</h2>
+<h3 id="varianza">Varianza</h3>
+<blockquote>
+<p><strong>Definición:</strong> 
+La <strong>Varianza</strong> (<span class="arithmatex">\(Var(X)\)</span>) es una medida fundamental que nos indica <strong>qué tan dispersa o extendida está la distribución</strong> de una variable aleatoria <span class="arithmatex">\(X\)</span>. Mientras que la esperanza o media (<span class="arithmatex">\(E(X)\)</span>) nos dice dónde está el "centro de masa" de la distribución, la varianza cuantifica su variabilidad.</p>
+</blockquote>
+<p><strong>Definición Funcional: La Desviación Cuadrada Promedio</strong></p>
+<p>La varianza de una variable aleatoria <span class="arithmatex">\(X\)</span> se define formalmente como la <strong>esperanza de la desviación cuadrada</strong> de <span class="arithmatex">\(X\)</span> respecto a su media <span class="arithmatex">\(EX\)</span>:</p>
+<div class="arithmatex">\[Var(X) = E[(X - E(X))^2]\]</div>
+<p><strong>Explicación Intuitiva (¿Por qué la cuadramos?):</strong> La varianza mide qué tan lejos está <span class="arithmatex">\(X\)</span> de su media, en promedio. Podríamos intentar calcular la desviación promedio <span class="arithmatex">\(E(X - EX)\)</span>, pero esta cantidad siempre es igual a cero debido a la propiedad de linealidad de la esperanza: las desviaciones positivas y negativas se anulan mutuamente.</p>
+<p>Al elevar al cuadrado las desviaciones <span class="arithmatex">\((X - EX)^2\)</span>, nos aseguramos de que tanto las desviaciones positivas como las negativas contribuyan al cálculo de la variabilidad total.</p>
+<p><strong>Definición para el Cálculo</strong></p>
+<p>Una fórmula equivalente, a menudo más fácil de usar para cálculos reales, es:</p>
+<div class="arithmatex">\[Var(X) = E(X^2) - (E(X))^2\]</div>
+<p>Esta expresión se deriva expandiendo la definición fundacional y aplicando la linealidad de la esperanza:</p>
+<p><span class="arithmatex">\(E((X - \mu)^2) = E(X^2 - 2\mu X + \mu^2) = E(X^2) - 2\mu E(X) + \mu^2\)</span>, donde <span class="arithmatex">\(\mu = E(X)\)</span>.</p>
+<p>Partimos de:</p>
+<div class="arithmatex">\[E(X^2) - 2\mu E(X) + \mu^2\]</div>
+<p>Sabemos por definición que <span class="arithmatex">\(\mu = E(X)\)</span>. Sustituimos <span class="arithmatex">\(E(X)\)</span> por <span class="arithmatex">\(\mu\)</span> en el segundo término:</p>
+<div class="arithmatex">\[E(X^2) - 2\mu(\mu) + \mu^2\]</div>
+<p>Ahora, multiplicamos los términos <span class="arithmatex">\(\mu\)</span>:</p>
+<div class="arithmatex">\[E(X^2) - 2\mu^2 + \mu^2\]</div>
+<p>Finalmente, combinamos los términos semejantes (<span class="arithmatex">\(-2\mu^2\)</span> y <span class="arithmatex">\(+\mu^2\)</span>):</p>
+<div class="arithmatex">\[E(X^2) - \mu^2\]</div>
+<h3 id="desviacion-estandar">Desviación Estándar</h3>
+<p>La <strong>Desviación Estándar</strong> (<span class="arithmatex">\(SD(X)\)</span>) es simplemente la raíz cuadrada de la varianza:</p>
+<div class="arithmatex">\[SD(X) = \sqrt{Var(X)}\]</div>
+<p><strong>Explicación Intuitiva (Unidades):</strong> Dado que la varianza es un promedio de distancias elevadas al cuadrado, tiene unidades incorrectas. Si <span class="arithmatex">\(X\)</span> se mide en dólares, <span class="arithmatex">\(Var(X)\)</span> se mide en "dólares cuadrados".
+La Desviación Estándar nos permite volver a las unidades originales de la variable aleatoria <span class="arithmatex">\(X\)</span> al tomar la raíz cuadrada, lo cual facilita la interpretación de la dispersión.</p>
+<h3 id="varianza-no-lineal">Varianza No Lineal</h3>
+<p>A diferencia de la esperanza, que es siempre lineal, la varianza <strong>no es lineal</strong>.</p>
+<p><strong>1. Multiplicación por una constante:</strong> Si multiplicamos <span class="arithmatex">\(X\)</span> por una constante <span class="arithmatex">\(c\)</span>, esta sale de la varianza elevada al cuadrado:</p>
+<div class="arithmatex">\[Var(cX) = c^2Var(X)\]</div>
+<p><em>Intuitivamente:</em> La constante sale al cuadrado porque la varianza mide la distancia cuadrática a la media.</p>
+<p><strong>2. Suma de variables aleatorias:</strong> En general, la varianza de una suma no es la suma de las varianzas:</p>
+<div class="arithmatex">\[Var(X + Y) \neq Var(X) + Var(Y)\]</div>
+<p><em>Nota importante:</em> La aditividad de la varianza (<span class="arithmatex">\(Var(X + Y) = Var(X) + Var(Y)\)</span>) solo es cierta si <span class="arithmatex">\(X\)</span> y <span class="arithmatex">\(Y\)</span> son variables aleatorias independientes. Si son dependientes, la igualdad no se mantiene.</p>
+<h3 id="ley-estadistico-inconsciente-lotus">Ley Estadístico Inconsciente (LOTUS)</h3>
+<p>Para calcular la varianza usando la fórmula <span class="arithmatex">\(Var(X) = E(X^2) - (EX)^2\)</span>, necesitamos calcular <span class="arithmatex">\(E(X^2)\)</span>. Para hacer esto correctamente, utilizamos la <strong>Ley del Estadístico Inconsciente (LOTUS)</strong>.</p>
+<p>LOTUS es crucial porque, en general, la esperanza de una función no lineal de <span class="arithmatex">\(X\)</span> <strong>no</strong> es igual a la función de la esperanza de <span class="arithmatex">\(X\)</span> (es decir, <span class="arithmatex">\(E[g(X)] \neq g(E(X))\)</span> si <span class="arithmatex">\(g\)</span> no es una función lineal).</p>
+<p><strong>Definición de LOTUS</strong></p>
+<p>Si <span class="arithmatex">\(X\)</span> es una variable aleatoria discreta y <span class="arithmatex">\(g\)</span> es una función, la esperanza de <span class="arithmatex">\(g(X)\)</span> se calcula como:</p>
+<div class="arithmatex">\[E[g(X)] = \sum_{x} g(x) P(X = x)\]</div>
+<p><strong>Explicación Intuitiva (La Tentación del "Estadístico Inconsciente"):</strong> El nombre de LOTUS proviene del hecho de que, para calcular <span class="arithmatex">\(E[g(X)]\)</span>, es tentador simplemente reemplazar el valor <span class="arithmatex">\(x\)</span> en la definición de la esperanza por <span class="arithmatex">\(g(x)\)</span>. Sorprendentemente, LOTUS afirma que este procedimiento mecánico, realizado casi inconscientemente, es correcto.</p>
+<p><strong>LOTUS en el Cálculo de <span class="arithmatex">\(E(X^2)\)</span>:</strong> Para calcular <span class="arithmatex">\(E(X^2)\)</span>, aplicamos LOTUS usando la función <span class="arithmatex">\(g(x) = x^2\)</span>. Solo necesitamos la FMP de <span class="arithmatex">\(X\)</span> para calcular <span class="arithmatex">\(E(X^2)\)</span>:</p>
+<div class="arithmatex">\[E(X^2) = \sum_{x} x^2 P(X = x)\]</div>
+<p><strong>Ejemplo Intuitivo: <span class="arithmatex">\(E[g(X)] \neq g(E(X))\)</span></strong> </p>
+<p>Considera el lanzamiento de una moneda justa hasta obtener la primera Cara (H). Sea <span class="arithmatex">\(N\)</span> el número total de lanzamientos (incluyendo el éxito). Si el pago <span class="arithmatex">\(X\)</span> es <span class="arithmatex">\(2^N\)</span> (dólares), queremos calcular <span class="arithmatex">\(E(X)\)</span>.</p>
+<ul>
+<li>
+<p>El número esperado de lanzamientos es <span class="arithmatex">\(E(N) = 1/p = 1/(1/2) = 2\)</span>.</p>
+</li>
+<li>
+<p>Si calculamos <span class="arithmatex">\(g(E(N))\)</span>, obtenemos <span class="arithmatex">\(2^{E(N)} = 2^2 = 4\)</span>.</p>
+</li>
+<li>
+<p>Sin embargo, si calculamos el valor esperado real <span class="arithmatex">\(E(X)\)</span> usando la definición, se encuentra que <span class="arithmatex">\(E(X) = \infty\)</span> (la suma diverge).</p>
+</li>
+</ul>
+<p>Este ejemplo ilustra el peligro de confundir <span class="arithmatex">\(E[g(X)]\)</span> con <span class="arithmatex">\(g(E(X))\)</span> cuando la función <span class="arithmatex">\(g\)</span> (en este caso, <span class="arithmatex">\(g(N)=2^N\)</span>) no es lineal.</p></div>
               
             </div>
           </div><footer>

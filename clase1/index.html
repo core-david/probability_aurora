@@ -42,7 +42,55 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Clase 1</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-eventos-operaciones-de-conjuntos">Tipos de Eventos (Operaciones de Conjuntos)</a>
+    <li class="toctree-l2"><a class="reference internal" href="#espacio-muestral-y-eventos">Espacio Muestral y Eventos</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tipos-de-eventos-operaciones-de-conjuntos">Tipos de Eventos (Operaciones de Conjuntos)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definicion-no-formal-de-la-probablidad">Definición no Formal de la Probablidad</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#restricciones-de-la-definicion-no-formal">Restricciones de la Definicion no Formal</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conteo-multiplicacion-permutaciones-y-combinaciones">Conteo: Multiplicación, Permutaciones y Combinaciones</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#regla-de-la-multiplicacion">Regla de la Multiplicación</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#permutaciones-muestreo-ordenado">Permutaciones (Muestreo Ordenado)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#combinaciones-muestreo-no-ordenado">Combinaciones (Muestreo No Ordenado)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#axiomas-de-kolmogorov-y-definicion-general-de-probabilidad">Axiomas de Kolmogorov y Definición General de Probabilidad</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#axiomas-de-kolmogorov">Axiomas de Kolmogorov</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#leyes-y-propiedades-basicas-de-la-probabilidad">Leyes y Propiedades Básicas de la Probabilidad</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-regla-del-complemento">1. Regla del Complemento</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-monotonicidad-ley-de-inclusion">2. Monotonicidad (Ley de Inclusión)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-ley-general-de-adicion-inclusion-exclusion-para-dos-eventos">3. Ley General de Adición (Inclusión-Exclusión para dos Eventos)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#probabilidad-condicional">Probabilidad condicional</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#independencia-de-eventos">Independencia de Eventos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#teorema-de-bayes">Teorema de Bayes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definicion-teorema-de-bayes">Definición Teorema de Bayes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#definicion-ley-de-probabilidad-total-lpt">Definición Ley de Probabilidad Total (LPT):</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -79,6 +127,7 @@
             <div class="section" itemprop="articleBody">
               
                 <div><p><div class="video-container"><iframe src="../videos/probablidad_1.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<h1 id="clase-1-definicion-formal-de-la-probablidad-y-teorema-de-bayes">Clase 1: Definición Formal de la probablidad y Teorema de Bayes</h1>
 <p><strong>¿Qué es la probablidad?</strong>
 La probabilidad es la lógica de la incertidumbre. Esta disciplina nos proporciona un marco lógico para cuantificar la incertidumbre y la aleatoriedad de una manera rigurosa</p>
 <h2 id="espacio-muestral-y-eventos">Espacio Muestral y Eventos</h2>
@@ -210,7 +259,150 @@ P_{\text{naïve}}(A) = \frac{|A|}{|S|} = \frac{\text{número de resultados favor
 <h3 id="3-ley-general-de-adicion-inclusion-exclusion-para-dos-eventos">3. Ley General de Adición (Inclusión-Exclusión para dos Eventos)</h3>
 <p>Para cualesquiera dos eventos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span>, no necesariamente disjuntos:</p>
 <div class="arithmatex">\[P(A \cup B) = P(A) + P(B) - P(A \cap B).\]</div>
-<p><strong>Justificación:</strong> Al sumar <span class="arithmatex">\(P(A) + P(B)\)</span>, la intersección <span class="arithmatex">\(A \cap B\)</span> se cuenta dos veces. Se resta <span class="arithmatex">\(P(A \cap B)\)</span> una vez para corregir esta doble cuenta. Este resultado se demuestra escribiendo la unión <span class="arithmatex">\(A \cup B\)</span> como la unión de eventos disjuntos, por ejemplo, <span class="arithmatex">\(A \cup (B \cap A^c)\)</span>.</p></div>
+<p><strong>Justificación:</strong> Al sumar <span class="arithmatex">\(P(A) + P(B)\)</span>, la intersección <span class="arithmatex">\(A \cap B\)</span> se cuenta dos veces. Se resta <span class="arithmatex">\(P(A \cap B)\)</span> una vez para corregir esta doble cuenta. Este resultado se demuestra escribiendo la unión <span class="arithmatex">\(A \cup B\)</span> como la unión de eventos disjuntos, por ejemplo, <span class="arithmatex">\(A \cup (B \cap A^c)\)</span>.</p>
+<h2 id="probabilidad-condicional">Probabilidad condicional</h2>
+<p>La probabilidad condicional es fundamental ya que nos permite cuantificar la incertidumbre y actualizar nuestras creencias a la luz de nueva evidencia. Una perspectiva útil es que todas las probabilidades son condicionales, ya que siempre se basa en conocimientos o suposiciones previas, incluso si no se establece explícitamente.</p>
+<p><strong>Definición</strong>
+Si <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span> son eventos con <span class="arithmatex">\(P(B)&gt;0\)</span>, la probabilidad condicional de <span class="arithmatex">\(A\)</span> dado <span class="arithmatex">\(B\)</span>, denotada por <span class="arithmatex">\(P(A∣B)\)</span>, se define como:
+$$
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+$$</p>
+<p>Aquí, <span class="arithmatex">\(A\)</span> es el evento cuya incertidumbre queremos actualizar, y <span class="arithmatex">\(B\)</span> es la evidencia que observamos o que se toma como dada.</p>
+<p>• <strong>Probabilidad a priori (Prior):</strong> <span class="arithmatex">\(P(A)\)</span> es la probabilidad de <span class="arithmatex">\(A\)</span> antes de actualizarla con la evidencia.
+• <strong>Probabilidad a posteriori (Posterior):</strong> <span class="arithmatex">\(P(A∣B)\)</span> es la probabilidad de A después de actualizarla con la evidencia <span class="arithmatex">\(B\)</span>.</p>
+<p>Intiución</p>
+<p><strong>Propiedades clave:</strong>
+Un punto crucial es que la función de probabilidad condicional <span class="arithmatex">\(P(⋅∣B)\)</span> satisface todos los axiomas de probabilidad. Por lo tanto, cualquier resultado que hayamos derivado sobre la probabilidad incondicional sigue siendo válido si reemplazamos todas las probabilidades por probabilidades condicionales a <span class="arithmatex">\(B\)</span>.</p>
+<div class="admonition ejercicio_1">
+<p class="admonition-title">Ejercicio_1</p>
+<p>Se baraja bien una baraja estándar de 52 cartas. Se extraen dos cartas al azar, una a la vez y sin reemplazo. Sea <span class="arithmatex">\(A\)</span> el evento de que la primera carta es un corazón, y <span class="arithmatex">\(B\)</span> el evento de que la segunda carta es roja. Encuentre <span class="arithmatex">\(P(A∣B)\)</span>.</p>
+</div>
+<details class="respuesta_1">
+<summary>Respuesta_1</summary>
+<p><span class="arithmatex">\(1.\)</span> Hallar <span class="arithmatex">\(P(A \cap B)\)</span>: El evento <span class="arithmatex">\(A∩B\)</span> es que la primera carta sea un corazón (hay 13) y la segunda carta sea roja. Una vez que se extrae un corazón, quedan 51 cartas, de las cuales 25 son rojas (las 12 cartas de diamantes restantes más las 13 cartas rojas no-corazón). </p>
+<div class="arithmatex">\[
+P(A \cap B) = \frac{13 \cdot 25}{52 \cdot 51} = \frac{25}{204}
+\]</div>
+<p><span class="arithmatex">\(2.\)</span> Hallar <span class="arithmatex">\(P(B)\)</span>: Por simetría, la segunda carta tiene la misma probabilidad de ser roja que la primera carta. Hay 26 cartas rojas en total. </p>
+<div class="arithmatex">\[
+P(B) = \frac{26}{52} = \frac{1}{2}
+\]</div>
+<p><span class="arithmatex">\(3.\)</span> Aplicar la Definición: </p>
+<div class="arithmatex">\[
+P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{25/204}{1/2} = \frac{25}{102}
+\]</div>
+</details>
+<hr>
+<div class="admonition ejercicio_2">
+<p class="admonition-title">Ejercicio_2</p>
+<p>Se reparten tres cartas de una baraja estándar bien barajada. Las dos primeras cartas se voltean, revelando el As de Picas como la primera carta y el 8 de Tréboles como la segunda carta.</p>
+<p><strong>Tarea:</strong> Dada esta información, encuentre la probabilidad de que la tercera carta sea un as.</p>
+</div>
+<h2 id="independencia-de-eventos">Independencia de Eventos</h2>
+<p>La independencia describe la situación en la que la ocurrencia de un evento no proporciona información que cambie la probabilidad de otro evento.</p>
+<p><strong>Definición</strong>
+Los eventos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span> son independientes si la probabilidad de su intersección es igual al producto de sus probabilidades individuales:</p>
+<div class="arithmatex">\[
+P(A \cap B) = P(A)P(B)\
+\]</div>
+<p>Si <span class="arithmatex">\(P(A)&gt;0\)</span> y <span class="arithmatex">\(P(B)&gt;0\)</span>, la independencia es equivalente a que:</p>
+<div class="arithmatex">\[
+P(A|B) = P(A) \quad \text{y} \quad P(B|A) = P(B)
+\]</div>
+<p>En otras palabras, aprender que B ocurrió no cambia nuestras probabilidades para <span class="arithmatex">\(A\)</span>.</p>
+<p><strong>Independencia vs. Disjunción:</strong> Es un error común confundir independencia con disjunción (eventos mutuamente excluyentes). Si <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span> son disjuntos <span class="arithmatex">\((A∩B=∅)\)</span>, entonces <span class="arithmatex">\(P(A∩B)=0\)</span>. Por lo tanto, los eventos disjuntos solo pueden ser independientes si <span class="arithmatex">\(P(A)=0\)</span> o <span class="arithmatex">\(P(B)=0\)</span>. Si A ocurre, sabemos con certeza que <span class="arithmatex">\(B\)</span> no ocurrió, lo que significa que <span class="arithmatex">\(A\)</span> sí proporciona información sobre <span class="arithmatex">\(B\)</span> y, por lo tanto, no son independientes (a menos que uno tenga probabilidad cero).</p>
+<p><strong>Independencia Múltiple:</strong> Para <span class="arithmatex">\(n\)</span> eventos <span class="arithmatex">\(A_1, A_2,..., A_n\)</span> sean independientes, se requiere que la probabilidad de la intersección de cualquier subconjunto de estos eventos sea igual al producto de sus probabilidades individuales. Por ejemplo, para tres eventos <span class="arithmatex">\(A,B,C\)</span>, se requiere la independencia por pares <span class="arithmatex">\((P(A∩B)=P(A)P(B), etc.)\)</span> y también: </p>
+<div class="arithmatex">\[
+P(A \cap B \cap C) = P(A)P(B)P(C)
+\]</div>
+<div class="admonition ejercicio_3">
+<p class="admonition-title">Ejercicio_3</p>
+<p>Se lanzan 6 dados justos de seis caras. ¿Cuál es la probabilidad del evento <span class="arithmatex">\(A\)</span>: obtener al menos un 6 cuando se lanzan 6 dados justos?</p>
+</div>
+<details class="solución_3">
+<summary>Solución_3</summary>
+<p>Utilizaremos la estrategia de calcular el complemento, ya que "al menos un 6" es una unión complicada, mientras que el complemento, "ningún 6", es una intersección de eventos independientes.</p>
+<p><span class="arithmatex">\(1.\)</span> Definir el complemento (<span class="arithmatex">\(A^c\)</span>): <span class="arithmatex">\(A^c\)</span> es el evento de obtener ningún 6 en los 6 lanzamientos.</p>
+<p><span class="arithmatex">\(2.\)</span> Calcular la probabilidad de no obtener un 6 en un lanzamiento: Es 1−1/6=5/6</p>
+<p><span class="arithmatex">\(3.\)</span> Aplicar Independencia: Asumiendo que los lanzamientos de los dados son independientes (intuición que corresponde a la definición matemática), la probabilidad de que los 6 dados sean no-seises es el producto de las probabilidades individuales: 
+$$
+P(A^{c}) = \left( \frac{5}{6} \right)^{6}
+$$</p>
+<p><span class="arithmatex">\(4.\)</span> Calcular <span class="arithmatex">\(P(A)\)</span>: 
+$$
+P(A) = 1 - P(A^{c}) = 1 - \left( \frac{5}{6} \right)^{6}  <br>
+$$</p>
+</details>
+<hr>
+<div class="admonition ejercicio_4">
+<p class="admonition-title">Ejercicio_4</p>
+<p>Usted va a jugar 2 partidas de ajedrez con un oponente al que nunca se ha enfrentado. Su oponente tiene la misma probabilidad de ser un principiante, un intermedio o un maestro (1/3 cada uno). Dependiendo del nivel de habilidad de su oponente, sus posibilidades de ganar una partida individual son 90%, 50% o 30%, respectivamente.</p>
+<ol>
+<li>¿Cuál es su probabilidad de ganar la primera partida?</li>
+<li>¡Felicidades, usted ganó la primera partida! Dada esta información, ¿cuál es la probabilidad de que también gane la segunda partida? (Asuma que, dado el nivel de habilidad de su oponente, los resultados de las partidas son condicionalmente independientes).</li>
+<li>Explique la distinción entre asumir que los resultados de las partidas son independientes y asumir que son condicionalmente independientes dado el nivel de habilidad del oponente.</li>
+</ol>
+</div>
+<h2 id="teorema-de-bayes">Teorema de Bayes</h2>
+<p>El Teorema de Bayes es una herramienta esencial que nos permite relacionar <span class="arithmatex">\(P(A∣B)\)</span> con <span class="arithmatex">\(P(B∣A)\)</span>, una relación que es a menudo necesaria ya que una de estas probabilidades suele ser mucho más fácil de encontrar directamente que la otra.</p>
+<p><strong>El Teorema de Bayes y la Ley de Probabilidad Total</strong>
+La forma más útil de aplicar el Teorema de Bayes es combinándolo con la Ley de Probabilidad Total (LPT), especialmente cuando la probabilidad del evento de la evidencia,$ P(B)$, no se conoce fácilmente.</p>
+<h3 id="definicion-teorema-de-bayes">Definición Teorema de Bayes</h3>
+<div class="arithmatex">\[
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+\]</div>
+<h3 id="definicion-ley-de-probabilidad-total-lpt">Definición Ley de Probabilidad Total (LPT):</h3>
+<p>Si <span class="arithmatex">\(A_1, A_2,..., A_n\)</span> es una partición del espacio muestral <span class="arithmatex">\(S\)</span> (es decir, los <span class="arithmatex">\(A_i\)</span> son disjuntos y su unión es <span class="arithmatex">\(S\)</span>), entonces la probabilidad de cualquier evento <span class="arithmatex">\(B\)</span> es la suma ponderada de las probabilidades de <span class="arithmatex">\(B\)</span> condicionadas por cada pieza de la partición:</p>
+<div class="arithmatex">\[
+P(B) = \sum_{i=1}^{n} P(B|A_{i})P(A_{i})
+\]</div>
+<p>Al combinar ambos, se reemplaza el denominador <span class="arithmatex">\(P(B)\)</span> de Bayes con la expansión de la LPT:</p>
+<div class="arithmatex">\[
+P(A_{i}|B) = \frac{P(B|A_{i})P(A_{i})}{P(B|A_{1})P(A_{1}) + P(B|A_{2})P(A_{2}) + \dots + P(B|A_{n})P(A_{n})}
+\]</div>
+<div class="admonition ejercicio_5">
+<p class="admonition-title">Ejercicio_5</p>
+<p>Un paciente es sometido a una prueba para la enfermedad "conditionitis", que afecta al 1% de la población. El resultado de la prueba es positivo <span class="arithmatex">\((T)\)</span>. El test es "95% preciso", lo que se interpreta como:</p>
+<ul>
+<li>
+<p>Sensibilidad (tasa de verdadero positivo): <span class="arithmatex">\(P(T∣D)=0.95\)</span> (Prob. de positivo dado que tiene la enfermedad <span class="arithmatex">\(D\)</span>).</p>
+</li>
+<li>
+<p>Especificidad (tasa de verdadero negativo): <span class="arithmatex">\(P(T^c|D^c)=0.95\)</span> (Prob. de negativo dado que no tiene la enfermedad <span class="arithmatex">\(D^c\)</span>)</p>
+</li>
+</ul>
+<p>Calcule la probabilidad condicional de que el paciente tenga conditionitis dado un resultado positivo, <span class="arithmatex">\(P(D∣T)\)</span></p>
+</div>
+<details class="solución_5">
+<summary>Solución_5</summary>
+<p><strong>1. Definir Priores:</strong>
+<span class="arithmatex">\(P(D) = 0.01\)</span> (prevalencia de la enfermedad).
+<span class="arithmatex">\(P(D^{c}) = 1 - 0.01 = 0.99\)</span></p>
+<p><strong>2. Definir Probabilidades de la Prueba (Likelihoods):</strong>
+<span class="arithmatex">\(P(T|D) = 0.95\)</span> (dado que tiene la enfermedad, el test es positivo).
+<span class="arithmatex">\(P(T|D^{c}) = 1 - P(T^{c}|D^{c}) = 1 - 0.95 = 0.05\)</span> (tasa de falso positivo)</p>
+<p><strong>3. Aplicar Bayes y LPT:</strong> Utilizamos la partición <span class="arithmatex">\(D\)</span> y <span class="arithmatex">\(D^{c}\)</span> (tiene o no tiene la enfermedad).</p>
+<div class="arithmatex">\[P(D|T) = \frac{P(T|D)P(D)}{P(T|D)P(D) + P(T|D^{c})P(D^{c})}\]</div>
+<p>Sustituyendo los valores:</p>
+<div class="arithmatex">\[P(D|T) = \frac{0.95 \cdot 0.01}{(0.95 \cdot 0.01) + (0.05 \cdot 0.99)}\]</div>
+<div class="arithmatex">\[P(D|T) = \frac{0.0095}{0.0095 + 0.0495} = \frac{0.0095}{0.0590} \approx 0.16\]</div>
+<p>Conclusión: Hay solo un 16% de probabilidad de que el paciente tenga la enfermedad dado que la prueba fue positiva, a pesar de que la prueba es "95% precisa". Esto se debe a que la rareza de la enfermedad (1%) juega un papel crucial, haciendo que los falsos positivos superen en número a los verdaderos positivos en la población general.</p>
+</details>
+<hr>
+<div class="admonition ejercicio_6">
+<p class="admonition-title">Ejercicio_6</p>
+<p>Un filtro de spam está diseñado observando frases comunes en el spam. Suponga que el 80% del correo electrónico es spam.</p>
+<ul>
+<li>
+<p>En el 10% de los correos spam, se utiliza la frase "dinero gratis".</p>
+</li>
+<li>
+<p>Esta frase solo se usa en el 1% de los correos no spam.</p>
+</li>
+</ul>
+<p>Acaba de llegar un nuevo correo electrónico que menciona "dinero gratis". ¿Cuál es la probabilidad de que sea spam?</p>
+<p>(Sugerencia: Defina S como el evento de que el correo es spam y F como el evento de que contiene la frase "dinero gratis". Busque P(S|F)).</p>
+</div></div>
               
             </div>
           </div><footer>
