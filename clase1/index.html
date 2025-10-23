@@ -311,6 +311,77 @@ P(A|B) = P(A) \quad \text{y} \quad P(B|A) = P(B)
 \]</div>
 <p>En otras palabras, aprender que B ocurrió no cambia nuestras probabilidades para <span class="arithmatex">\(A\)</span>.</p>
 <p><strong>Independencia vs. Disjunción:</strong> Es un error común confundir independencia con disjunción (eventos mutuamente excluyentes). Si <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span> son disjuntos <span class="arithmatex">\((A∩B=∅)\)</span>, entonces <span class="arithmatex">\(P(A∩B)=0\)</span>. Por lo tanto, los eventos disjuntos solo pueden ser independientes si <span class="arithmatex">\(P(A)=0\)</span> o <span class="arithmatex">\(P(B)=0\)</span>. Si A ocurre, sabemos con certeza que <span class="arithmatex">\(B\)</span> no ocurrió, lo que significa que <span class="arithmatex">\(A\)</span> sí proporciona información sobre <span class="arithmatex">\(B\)</span> y, por lo tanto, no son independientes (a menos que uno tenga probabilidad cero).</p>
+<p>Piensa en los eventos como personas:</p>
+<ul>
+<li><strong>Eventos Disjuntos (Mutuamente Excluyentes):</strong> Son "Rivales". Si uno gana, el otro tiene que perder. No pueden estar en el podio al mismo tiempo.</li>
+<li><strong>Eventos Independientes:</strong> Son "Desconocidos". Viven en países diferentes. Lo que le pasa a uno (ganar la lotería en Perú) no tiene ningún efecto en lo que le pasa al otro (reprobar un examen en Japón).</li>
+</ul>
+<p><strong>El Error: Creer que "no tener nada que ver" es ser disjuntos</strong>
+La confusión viene de pensar que "no tener nada que ver" (<em>independencia</em>) significa "no pueden pasar juntos" (<em>disjuntos</em>). En probabilidad, es exactamente lo opuesto.</p>
+<p>Vamos a usar un ejemplo numérico simple: Lanzar un dado de 6 caras.</p>
+<ul>
+<li><strong>Evento A:</strong> "Que salga un 2". <span class="arithmatex">\(P(A) = 1/6\)</span></li>
+<li>
+<p><strong>Evento B:</strong> "Que salga un 4". <span class="arithmatex">\(P(B) = 1/6\)</span></p>
+</li>
+<li>
+<p><strong>¿Son Disjuntos?</strong>
+    Sí. Es imposible que en un solo lanzamiento saques un 2 Y un 4 al mismo tiempo. Si A ocurre, B no puede ocurrir.
+    <span class="arithmatex">\(P(A \cap B) = 0\)</span>.</p>
+</li>
+<li>
+<p><strong>¿Son Independientes?</strong>
+    Aquí está la clave. La definición de independencia es: "¿Saber que uno pasó, me da información sobre el otro?"</p>
+<p>Imagina que vas a lanzar el dado.
+* Te pregunto: "¿Cuál es la probabilidad de que salga un 4 (Evento B)?"</p>
+<ul>
+<li>Me dices: "1/6".</li>
+</ul>
+<p>Ahora, lanzo el dado (no lo ves) y te digo: "Ocurrió el Evento A (salió un 2)".
+* Te vuelvo a preguntar: "Sabiendo eso, ¿cuál es la probabilidad de que salga un 4 (Evento B)?"</p>
+<ul>
+<li>Me dices: "0%".</li>
+</ul>
+<p>¡La probabilidad cambió! Pasó de 1/6 a 0.</p>
+<p>El hecho de que <span class="arithmatex">\(A\)</span> ocurriera te dio información valiosísima sobre <span class="arithmatex">\(B\)</span>: te dijo que <span class="arithmatex">\(B\)</span> es imposible.</p>
+<p>Como <span class="arithmatex">\(A\)</span> te dio información sobre <span class="arithmatex">\(B\)</span>, <strong>NO</strong> son independientes. Son <strong>DEPENDIENTES</strong>.</p>
+</li>
+</ul>
+<p><strong>El Contraste: Un Ejemplo de Independencia Real</strong>
+Ahora veamos eventos que sí son independientes. Para esto, necesitamos dos experimentos, por ejemplo, lanzar dos dados (uno rojo y uno azul).</p>
+<ul>
+<li><strong>Evento A:</strong> "El dado rojo saca un 2". <span class="arithmatex">\(P(A) = 1/6\)</span></li>
+<li>
+<p><strong>Evento C:</strong> "El dado azul saca un 4". <span class="arithmatex">\(P(C) = 1/6\)</span></p>
+</li>
+<li>
+<p><strong>¿Son Disjuntos?</strong>
+    No. Es perfectamente posible que saques un 2 en el rojo Y un 4 en el azul al mismo tiempo. <span class="arithmatex">\(P(A \cap C)\)</span> no es cero (es <span class="arithmatex">\(1/36\)</span>).</p>
+</li>
+<li>
+<p><strong>¿Son Independientes?</strong>
+    Veamos si <span class="arithmatex">\(A\)</span> nos da información sobre <span class="arithmatex">\(C\)</span>.</p>
+<ul>
+<li>
+<p>Te pregunto: "¿Cuál es la probabilidad de que el dado azul saque un 4 (Evento C)?"</p>
+</li>
+<li>
+<p>Me dices: "1/6".</p>
+</li>
+</ul>
+<p>Ahora, lanzo el dado rojo y te digo: "Ocurrió el Evento A (el rojo sacó un 2)".
+* Te vuelvo a preguntar: "Sabiendo eso, ¿cuál es la probabilidad de que el dado azul saque un 4 (Evento C)?"
+* Me dices: "Sigue siendo 1/6".</p>
+<p>¡La probabilidad <strong>NO</strong> cambió!</p>
+<p>Saber el resultado del dado rojo no te dio ninguna pista sobre el dado azul. No se afectan.</p>
+<p>Como <span class="arithmatex">\(A\)</span> <strong>NO</strong> te dio información sobre <span class="arithmatex">\(C\)</span>, <strong>SÍ</strong> son independientes.</p>
+</li>
+</ul>
+<p><strong>Resumen</strong></p>
+<ul>
+<li><strong>Disjuntos</strong> = Conexión Fuerte (negativa). Están tan conectados que si uno pasa, el otro es eliminado. Son dependientes.</li>
+<li><strong>Independientes</strong> = Sin Conexión. Lo que haga uno no le importa al otro. Sus probabilidades no se afectan. Generalmente no son disjuntos (pueden pasar juntos).</li>
+</ul>
 <p><strong>Independencia Múltiple:</strong> Para <span class="arithmatex">\(n\)</span> eventos <span class="arithmatex">\(A_1, A_2,..., A_n\)</span> sean independientes, se requiere que la probabilidad de la intersección de cualquier subconjunto de estos eventos sea igual al producto de sus probabilidades individuales. Por ejemplo, para tres eventos <span class="arithmatex">\(A,B,C\)</span>, se requiere la independencia por pares <span class="arithmatex">\((P(A∩B)=P(A)P(B), etc.)\)</span> y también: </p>
 <div class="arithmatex">\[
 P(A \cap B \cap C) = P(A)P(B)P(C)
